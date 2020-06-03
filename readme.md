@@ -1,5 +1,24 @@
-# Tailwind Blog Template
+# personal-blog
 
-This is a simple blog template buit with [Tailwind](https://tailwindcss.com/) and [AlpineJS](https://github.com/alpinejs/alpine). Alpine was used for the mobile menu and the basic carousel at the bottom of the page.
+## Project setup
+```
+npm install
+```
 
-View the blog demo [here](https://tailwind-blog-demo.dgrzyb.me) and the post demo [here](https://tailwind-blog-demo.dgrzyb.me/post.html) 😎
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
