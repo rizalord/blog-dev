@@ -13,16 +13,32 @@
         </nav>
 
         <div class="flex items-center text-lg no-underline text-white pr-6">
-          <a class="" href="#">
+          <a
+            class=""
+            href="https://web.facebook.com/lexeto.farron"
+            target="_blank"
+          >
             <i class="fab fa-facebook"></i>
           </a>
-          <a class="pl-6" href="#">
+          <a
+            class="pl-6"
+            href="https://www.instagram.com/ahmad.khamdani2/"
+            target="_blank"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a class="pl-6" href="#">
+          <a
+            class="pl-6"
+            href="https://twitter.com/Rizal92183683"
+            target="_blank"
+          >
             <i class="fab fa-twitter"></i>
           </a>
-          <a class="pl-6" href="#">
+          <a
+            class="pl-6"
+            href="https://www.linkedin.com/in/ahmad-khamdani-7a4815169/"
+            target="_blank"
+          >
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
@@ -32,12 +48,13 @@
     <!-- Text Header -->
     <header class="w-full container mx-auto">
       <div class="flex flex-col items-center py-12">
-        <a
+        <router-link
+          to="/"
           class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl"
           href="#"
         >
           Ahmad Khamdani
-        </a>
+        </router-link>
         <p class="text-lg text-gray-600">
           Fullstack Developer
         </p>
@@ -69,15 +86,15 @@
         <div
           class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2"
         >
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-            >Technology</a
-          >
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-            >Programming</a
-          >
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Daily</a>
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-            >Design UI/UX</a
+          <router-link
+            :to="{
+              name: 'Home',
+              params: { page: 1, category: category.category },
+            }"
+            class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+            v-for="category in categories"
+            :key="category.id"
+            >{{ category.category }}</router-link
           >
         </div>
       </div>
@@ -86,11 +103,21 @@
 </template>
 
 <script>
+import server from "./../static";
+
 export default {
-  data(){
+  data() {
     return {
-      open : false
-    }
-  }
+      open: false,
+      categories: [],
+    };
+  },
+  methods: {
+  },
+  created() {
+    this.$http.get(server.server_url + "categories").then((res) => {
+      this.categories = res.data;
+    });
+  },
 };
 </script>
