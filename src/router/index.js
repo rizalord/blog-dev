@@ -7,21 +7,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/:page?/:category?",
-    name: "Home",
-    component: Home,
-    meta : {
-      reuse: true
-    }
-    // props: (route) => ({
-    //   page: route.params.page || 1,
-    //   category: route.params.category || null,
-    // }),
-  },
-  {
     path: "/read/:id",
     name: "Read",
     component: Read,
+  },
+  {
+    path: "/:page?/:category?",
+    name: "Home",
+    component: Home,
   },
 ];
 

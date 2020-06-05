@@ -29,7 +29,7 @@
           </a>
           <a
             class="pl-6"
-            href="https://twitter.com/Rizal92183683"
+            href="https://twitter.com/rizalord_"
             target="_blank"
           >
             <i class="fab fa-twitter"></i>

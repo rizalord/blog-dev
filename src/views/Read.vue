@@ -6,7 +6,7 @@
       <read v-if="data != null" :data="data" />
 
       <!-- Pagination -->
-      <div class="w-full flex pt-6">
+      <!-- <div class="w-full flex pt-6">
         <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
           <p class="text-lg text-blue-800 font-bold flex items-center">
             <i class="fas fa-arrow-left pr-1"></i> Previous
@@ -24,7 +24,7 @@
           </p>
           <p class="pt-2">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</p>
         </a>
-      </div>
+      </div> -->
 
       <div
         class="w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6"
@@ -43,16 +43,16 @@
           <div
             class="flex items-center justify-center md:justify-start text-2xl no-underline text-blue-800 pt-4"
           >
-            <a class="" href="#">
+            <a target="_blank" class="" href="https://web.facebook.com/lexeto.farron">
               <i class="fab fa-facebook"></i>
             </a>
-            <a class="pl-4" href="#">
+            <a target="_blank" class="pl-4" href="https://www.instagram.com/ahmad.khamdani2/">
               <i class="fab fa-instagram"></i>
             </a>
-            <a class="pl-4" href="#">
+            <a target="_blank" class="pl-4" href="https://twitter.com/rizalord_">
               <i class="fab fa-twitter"></i>
             </a>
-            <a class="pl-4" href="#">
+            <a target="_blank" class="pl-4" href="https://www.linkedin.com/in/ahmad-khamdani-7a4815169/">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
@@ -99,5 +99,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
