@@ -1,4 +1,4 @@
 export default {
-    server_url : 'http://localhost:1337/',
-    perPage: 3
-}
+  server_url: "https://rizalord-blog-rest-api.herokuapp.com/",
+  perPage: 3,
+};
